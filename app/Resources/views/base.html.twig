@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Association LL</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{asset('css/sass/custom.css')}}">
+    </head>
+    <body id="homepage">
+      <div class="row navBar">
+        <head>
+            <div class="col-md-2 divLogo">
+                <a href="#" class="nav-link menuLogo">association LL</a>
+            </div>
+            <div class="col-md-6 divMenu">
+
+              <ul class="nav">
+                <li><a href="{{path('homepage')}}" class="nav-link menuTitle">accueil</a></li>
+                <li><a href="{{ path ('autism_info')}}" class="nav-link menuTitle">autisme info</a></li>
+                <li><a href="#" class="nav-link menuTitle">contact</a></li>
+                <li><a href="{{ path('page_legal')}}" class="nav-link menuTitle">mentions légales</a></li>
+              </ul>
+
+            </div>
+            <div class="col-md-4 divAdmin">
+              <a href="{{ path('admin_list')}}" class="nav-link menuTitle">administrateurs</a>
+
+              <div>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('fos_user_security_logout') }}" class="nav-link menuTitle deconnexion">Bonjour <strong>{{ app.user.username }}</strong> |
+                        {{ 'deconnexion'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}" class="nav-link menuTitle connexion">{{ 'connexion'|trans({}, 'FOSUserBundle') }}</a>
+                {% endif %}
+              </div>
+            </div>
+
+          </head>
+      </div>
+
+
+    {% block body %}
+      <div class="container theme-showcase blockFormSecurity" role="main">
+        <div class="jumbotron">
+          {% block name %}
+          {% endblock %}
+
+          {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                  <div class="flash-{{ type }}">
+                      {{ message }}
+                  </div>
+                {% endfor %}
+              {% endfor %}
+          {% endif %}
+
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    {% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

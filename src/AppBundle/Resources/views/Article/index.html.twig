@@ -1,0 +1,56 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+{% include "AppBundle:Admin:menuAdmin.html.twig" %}
+<div class="container articleListPage">
+  <div class="inputArticlePage">
+
+    <a href="{{path ('article_add')}}"><i class="fa fa-plus-square" aria-hidden="true">  <span>ajouter un article</span></i></a>
+
+    <!-- <div class="form-group"> -->
+      <select name="articleFilter">
+      <option value="0" selected>filtrer ...</option>
+      <option value="1">Mes articles</option>
+      <option value="2">Tous les articles</option>
+    </select>
+  <!-- </div> -->
+  </div>
+
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>titre</th>
+        <th>publié le</th>
+        <th>modifié le</th>
+        <th>actions</th>
+      </tr>
+
+    </thead>
+
+    <tbody>
+      {% for a in articles %}
+      <tr>
+        <td>1</td>
+        <td>{{a.title}}</td>
+        <td>{{a.createdAt|date('d-m-Y')}}</td>
+        <td>{{a.updateAt|date('d-m-Y')}}</td>
+        <td>
+          <a href="{{path ('article_update',{'id':a.id}) }}">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </a>
+          <a href="{{path ('article_delete',{'id':a.id}) }}">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a>
+        </td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+
+</div>
+
+{% endblock %}

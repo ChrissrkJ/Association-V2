@@ -1,0 +1,157 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+//homepage
+#homepage{
+  background-color: white;
+}
+
+// NAVIGATION
+.navBar{
+    background-color: $dark_blue;
+    height: 45px;
+    a:hover{
+      color:$mustard;
+      font-weight: 600;
+    }
+    .divLogo{
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .menuLogo {
+        font-weight: 900;
+        font-size: 20px;
+        color:$white_typo;
+        padding: 0px;
+      }
+    }
+
+    .divMenu{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      ul{
+        display: flex;
+        .menuTitle {
+        font-size: 12px;
+        font-weight: lighter;
+        color : $white_typo;
+        padding-bottom: 5px;
+
+        }
+      }
+    }
+
+    .divAdmin{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      a{
+        font-size: 12px;
+        font-weight: lighter;
+        color : $white_typo;
+        padding-bottom: 5px;
+      }
+    }
+  }
+.divLogo, .divMenu, .divAdmin{
+  height: 100%;
+  padding: 0px;
+}
+
+
+
+
+//THREE BLOCS
+.threeBlocs{
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
+
+  .divQsn{
+    background-color: $light_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    :hover{
+    cursor: pointer;
+    color: $mustard;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .divSignIn{
+    background-color:$medium_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    :hover{
+    cursor: pointer;
+    color : $mustard;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .divSignUp{
+    background-color: $grey_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    :hover{
+    cursor: pointer;
+    color: $mustard;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+///SECTION SECURITE
+.blockFormSecurity{
+  display: flex;
+  justify-content: center;
+  .jumbotron{
+    margin-top: 25px;
+    width: 80%;
+    text-align: center;
+  label{
+    margin-right: 15px;
+  }
+    form {
+    display: flex;
+    flex-direction: column;
+    input{
+      align-self: center;
+      margin-bottom: 15px;
+      background-color: $grey;
+      border : 2px solid $white_typo;
+      border-radius: 15px;
+      height: 30px;
+      width: 45%;
+    }
+    #_submit{
+        width: 20%;
+        background-color: $dark_blue;
+        boder:none;
+        color:$white_typo;
+        height: 35px;
+      }
+    }
+
+}
+}

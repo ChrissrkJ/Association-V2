@@ -1,0 +1,148 @@
+/********************LISTE D'ARTICLES *********************/
+
+.articleListPage{
+  margin-top: 15px;
+  .inputArticlePage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+
+    a {
+      font-size: 14px;
+      i{
+        color : $ligth_green;
+        span{
+          color:$ligth_green;
+        }
+      }
+    }
+
+    select{
+    width: 150px;
+    height: 35px;
+    color: $dark_blue;
+    border: 1px solid $dark_blue;
+    border-radius: 15px;
+    background-color: $white_typo;
+    text-align: center;
+    }
+  }
+
+  ///TABLE
+  table{
+    thead{
+      background-color: $medium_blue;
+      th {
+        color: $white_typo;
+        text-align: center;
+      }
+
+    }
+    td {
+      color: $dark_blue;
+      text-align: center;
+      i{
+        color: $dark_blue;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+    }
+
+  }
+}
+
+
+/***********ADD ARTICLE PAGE************/
+.addArticlePage{
+  color: white;
+  width: 50%;
+  margin-top: 15px;
+  text-align: center;
+  background-color: $dark_blue;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h5 {
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  label {
+    color: white;
+    padding-top: 10px;
+    margin: 0px;
+  }
+
+  .addArticleForm{
+
+    margin-top: 15px;
+    width: 50%;
+    align-self: center;
+    input, .inputArticle,.inputImage {
+      text-align: center;
+      color: white;
+      margin-top: 5px;
+      border: 1px solid white;
+      border-radius: 15px;
+      background-color: $dark_blue;
+    }
+    .btn {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .inputArticle {
+      width: 100%;
+      height: 200px;
+    }
+
+    select {
+      color: white;
+      text-align: center;
+      width: 30%;
+      margin-top: 10px;
+      border: 1px solid white;
+      border-radius: 10px;
+      background-color: $dark_blue;
+    }
+  }
+}
+
+/*******************AUTISM INFO PAGE**************************/
+.artPageTitle {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+.artSection {
+  margin-top: 15px;
+  .artBody {
+    background-color: $dark_blue;
+    color:$white_typo;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    h4{
+      margin: 0px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid white;
+    }
+
+    p{
+      color : $white_typo;
+      margin: 0px;
+      padding: 10px;
+    }
+    .artPubliInfo{
+      font-size: 12px;
+      align-self: flex-end;
+
+    }
+  }
+}

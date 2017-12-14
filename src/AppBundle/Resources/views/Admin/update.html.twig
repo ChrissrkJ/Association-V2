@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block name %}
+  <span class="text-info">
+    <h1>Mise à jour administrateur</h1>
+  </span>
+  <hr>
+
+{% endblock %}
+{% block body %}
+
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Mettre à jour" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_list') }}">Back to the list</a>
+        </li>
+
+    </ul>
+{% endblock %}

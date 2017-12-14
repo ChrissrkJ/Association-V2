@@ -1,0 +1,13 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+
+
+{% block fos_user_content %}
+<span class="text-info">
+<h4>S'enregistrer</h4>
+</span>
+<hr>
+
+    {% include "@FOSUser/Registration/register_content.html.twig" %}
+    <small class="pull-right"><a href="{{ path('fos_user_security_login') }}">login existing account?</a></small>
+{% endblock fos_user_content %}

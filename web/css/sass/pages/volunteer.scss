@@ -1,0 +1,95 @@
+/**************INDEX PAGE LIST************/
+.addVoltBtn {
+  margin-bottom: 10px;
+  a{
+    color:$ligth_green;
+    i{
+      color:$ligth_green;
+      span{
+        color:$ligth_green;
+      }
+    }
+  }
+}
+
+.listVolt{
+  table{
+    thead{
+      background-color: $dark_blue;
+      color:$white_typo;
+      text-align: center;
+    }
+    tbody{
+      color: $dark_blue;
+      .tableAction{
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        a{
+          :hover{
+            font-size: 20px;
+            color: $mustard;
+          }
+          i{
+            color: $dark_blue;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**************FORM ADD VOLUNTEER**************/
+.addVoltPage{
+  width: 50%;
+  background-color: $dark_blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .addVoltForm{
+    color: $white_typo;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form-group{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      label{
+      color: $white_typo;
+      }
+
+      input {
+        color: white;
+        text-align: center;
+        background-color: $dark_blue;
+        border: 1px solid white;
+        border-radius: 20px;
+        height: 40px;
+      }
+
+      textarea {
+        color: white;
+        text-align: center;
+        background-color: $dark_blue;
+        border: 1px solid white;
+        border-radius: 20px;
+      }
+
+      .btn{
+        background-color: white;
+        border-radius: 20px;
+        color : $dark_blue;
+        font-weight: 600;
+      }
+    }
+  }
+}

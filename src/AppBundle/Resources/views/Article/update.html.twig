@@ -1,0 +1,63 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+{% include "AppBundle:Admin:menuAdmin.html.twig" %}
+<div class="container">
+  <a href="{{ path('article_list') }}">Retour à la liste >></a>
+</div>
+
+<div class=" container addArticlePage">
+  <h5>ajouter un article : </h5>
+
+  <div class="addArticleForm">
+    {{ form_start(form) }}
+      <div class="form-group">
+        {{ form_label(form.title, 'titre de l\'article :')}}
+        {{ form_widget(form.title)}}
+      </div>
+
+      <div class="form-group">
+        {{ form_label(form.body, 'article :')}}
+        {{ form_widget(form.body,
+          {'attr' : {
+          'placeholder' : " votre texte ici ... ",
+          'class' : 'inputArticle'
+          }}
+        )}}
+      </div>
+
+      <div class="form-group">
+        {{ form_label(form.createdAt, 'date de publication :')}}
+        {{ form_widget(form.createdAt, {
+        'attr' :{
+        'class' : 'inputDate'
+        }
+        })}}
+      </div>
+
+      <div class="form-group">
+        {{ form_label(form.updateAt, 'date de modification :')}}
+        {{ form_widget(form.updateAt, {
+        'attr' :{
+        'class' : 'inputDate'
+        }
+        })}}
+      </div>
+
+      <div class="form-group">
+        {{ form_label(form.submit,'Valider')}}
+        {{ form_widget(form.submit,
+          {'attr':{
+          'class':'btn'
+          }}
+        )}}
+      </div>
+
+    {{ form_end (form) }}
+
+
+  </div>
+
+</div>
+
+{% endblock %}

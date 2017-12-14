@@ -1,0 +1,25 @@
+{% block body %}
+<div class="row adminPageHead">
+    <div class="col-md-2 avatarAdmin">
+          <a href="{{ path('admin_index')}}"><img src="{{asset('images/admin/avatar.png')}}" alt="avatar"></a>
+    </div>
+    <div class="col-md-3 hiAdmin">
+      <p>Bonjour <strong>{{app.user.username}}</strong></p>
+    </div>
+
+    <div class="col-md-7 navAdmin">
+      <nav>
+        <ul>
+          <li><a href="{{ path('admin_list')}}" class="nav-link menuAdmin">admins</a></li>
+          <li><a href="{{ path('article_list')}}" class="nav-link menuAdmin">articles</a></li>
+          <li><a href="{{ path('user_list')}}" class="nav-link menuAdmin">utilisateurs</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+</div>
+
+      <hr>
+{% endblock %}

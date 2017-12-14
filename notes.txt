@@ -1,0 +1,15 @@
+https://www.supinfo.com/articles/single/5972-installer-configurer-fosuserbundle-symfony-3
+
+
+https://www.floran-magre.com/fr/article/3/show/symfony-3-fosuser-faire-son-propre-user-manager
+
+
+
+https://maryamdev.blogspot.fr/2017/10/tuto-symfony-3-upload-dune-image-en.html
+
+ 
+
+https://www.twilio.com/blog/2017/09/symfony-3-and-fos-user-bundle-customizing-users.html
+https://github.com/mstaples/Symfony3Users
+
+https://www.expression-web.fr/symfony3-datatransformer/

@@ -1,0 +1,52 @@
+
+{% extends "::base.html.twig" %}
+{% block body %}
+{% include "AppBundle:Admin:menuAdmin.html.twig" %}
+
+<div class="row">
+  <div class="container listAdminTable">
+    <div class="btnAddAdmin">
+      <a href="{{path('user_register')}}" ><i class="fa fa-plus-square" aria-hidden="true">  <span>ajouter un utilisateur</span></i></a>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <th>prénom</th>
+        <th>nom</th>
+        <th>mail</th>
+        <th>téléphone</th>
+        <th>Catégorie</th>
+        <th>actions</th>
+      </thead>
+      <tbody>
+        {% for u in  users %}
+        <tr>
+          <td>{{ u.firstname}}</td>
+          <td>{{ u.lastname}}</td>
+          <td>{{ u.email}}</td>
+          <td>{{ u.phoneNumber}}</td>
+          <td>{% if u.userCategory %}
+           {{u.userCategory.name}}
+          {% else %}
+           Pas de producteur
+          {% endif %}</td>
+
+          <td class="tableAction">
+            <a href="{{path ('user_update',{'id':u.id}) }}" >
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </a>
+            <a href="{{path ('user_delete',{'id':u.id}) }}">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+{% endblock %}

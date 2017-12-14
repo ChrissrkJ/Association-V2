@@ -1,0 +1,17 @@
+.pageQsn{
+  display: flex;
+  justify-content: center;
+  .jumbotron{
+    margin-top: 25px;
+    width: 80%;
+    text-align: center;
+
+    .text-info{
+      h5{
+        color: $mustard;
+        font-weight: 600;
+      }
+    }
+  }
+
+}

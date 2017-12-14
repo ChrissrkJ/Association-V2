@@ -1,0 +1,19 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block name %}
+{% include "AppBundle:Admin:menuAdmin.html.twig" %}
+    <span class="text-info">
+        <h1>Register</h1>
+    </span>
+    <hr/>
+{% endblock name %}
+
+{% block fos_user_content %}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<input type="submit" value="Enregistrer" />
+{{ form_end(form) }}
+
+<a href="{{ path('admin_list') }}">retour à la liste</a>
+
+{% endblock fos_user_content %}
